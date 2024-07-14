@@ -1,0 +1,37 @@
+{
+  "title": "Custom configuration for separate scrolling direction",
+  "rules": [
+    {
+      "description": "Reverse scrolling for mouse only",
+      "manipulators": [
+        {
+          "type": "mouse_motion_to_scroll",
+          "from": {
+            "pointing_button": "button1"
+          },
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "is_keyboard": false,
+                  "is_pointing_device": true,
+                  "product_id": "your_mouse_product_id",
+                  "vendor_id": "your_mouse_vendor_id"
+                }
+              ]
+            }
+          ],
+          "scroll": {
+            "vertical": {
+              "invert": true
+            },
+            "horizontal": {
+              "invert": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
