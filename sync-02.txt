@@ -1,0 +1,47 @@
+{
+    "description": "Swap Left Alt and Left Command on Logitech keyboard",
+    "manipulators": [
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "left_alt"
+            },
+            "to": {
+                "key_code": "left_gui"
+            },
+            "conditions": [
+                {
+                    "type": "input_device",
+                    "identifiers": [
+                        {
+                            "vendor_id": YOUR_VENDOR_ID,
+                            "product_id": YOUR_PRODUCT_ID,
+                            "is_keyboard": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "left_gui"
+            },
+            "to": {
+                "key_code": "left_alt"
+            },
+            "conditions": [
+                {
+                    "type": "input_device",
+                    "identifiers": [
+                        {
+                            "vendor_id": YOUR_VENDOR_ID,
+                            "product_id": YOUR_PRODUCT_ID,
+                            "is_keyboard": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
